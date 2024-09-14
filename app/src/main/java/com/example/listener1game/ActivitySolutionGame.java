@@ -32,6 +32,12 @@ public class ActivitySolutionGame extends AppCompatActivity {
         tV1.setText("red score: " + redPoints);
         tV2.setText("blue score: " + bluePoints);
 
+        if(bluePoints>redPoints)
+            tVWinner.setText("The winner is Blue");
+        else if(bluePoints<redPoints)
+            tVWinner.setText("The winner is Red");
+        else
+            tVWinner.setText("It's a draw");
     }
 
     public void goback(View view) {

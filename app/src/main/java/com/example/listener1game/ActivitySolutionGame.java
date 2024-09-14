@@ -21,7 +21,17 @@ public class ActivitySolutionGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solution_game);
 
-        
+        tV1 = findViewById(R.id.tV1);
+        tV2 = findViewById(R.id.tV2);
+        tVWinner = findViewById(R.id.tVWinner);
+
+        gi = getIntent();
+        int redPoints = gi.getIntExtra("redPoints", -1);
+        int bluePoints = gi.getIntExtra("bluePoints", -1);
+
+        tV1.setText("red score: " + redPoints);
+        tV2.setText("blue score: " + bluePoints);
+
     }
 
     public void goback(View view) {
